@@ -1,0 +1,65 @@
+/*--------header------------*/
+
+.header {
+   background-color: $ColorSelectTwo;
+   &__content {
+      height: 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__left {
+      display: flex;
+   }
+
+   &__right {
+      display: flex;
+      align-items: center;
+   }
+
+   &__logo {
+      margin-right: 40px;
+   }
+
+   &__search {
+      align-self: center;
+      & svg path {
+         transition: fill .5s ease;
+      }
+      &:hover path {
+         fill: $ColorSelect;
+      }
+   }
+
+   &__menu {
+      & svg path {
+         transition: fill .5s ease;
+      }
+      &:hover path {
+         fill: $ColorSelect;
+      }
+   }  
+
+   &__profile {
+      margin: 0 33px;
+      & svg path {
+         transition: fill .5s ease;
+      }
+      &:hover path {
+         fill: $ColorSelect;
+      }  
+   }
+
+   &__basket {
+      & svg path {
+         transition: fill .5s ease;
+      }
+      &:hover path {
+         fill: $ColorSelect;
+      }
+   }
+}
+
+
+/*--------------------*/
