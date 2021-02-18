@@ -1,0 +1,72 @@
+/*--------------------*/
+._ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+body.ie {
+	._ibg {
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	._ibg img {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+/*--------------------*/
+
+$ColorSelect: #F16D7F;
+$ColorSelectTwo: #222;
+/*--------------------*/
+
+summary::-webkit-details-marker {
+	display: none;
+}
+/*--------------------*/
+
+/*-----button add to cart---------------*/
+.add-to-cart {
+	padding: 9px 15px;
+	cursor: pointer;
+	border: 1px solid $ColorSelect;
+	transition: box-shadow 0.3s ease;
+	display: flex;
+	&:hover {
+		box-shadow: 0 0 5px $ColorSelect;
+	}
+
+	&__svg path{
+		fill: $ColorSelect;
+	}
+
+	&__span {
+		color: $ColorSelect;
+      font-size: 14px;
+      line-height: 17px;
+      align-self: center;
+      margin-left: 11px;
+	}
+}
+.white-add {
+	border-color: #fff;
+	&:hover {
+		box-shadow: 0 0 5px #fff;
+	}
+	& svg path {
+		fill: #fff;
+	}
+	& span {
+		color: #fff;
+	}
+}
+/*--------------------*/
