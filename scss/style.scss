@@ -1,0 +1,266 @@
+@import "_null.scss";
+@import "_mixins.scss";
+@import "_ui.scss";
+
+
+/*--------------------*/
+
+body {
+   font-family: 'Lato', sans-serif;
+   font-weight: 400;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   min-height: 100%;
+}
+
+.container {
+   max-width: 1140px;
+   margin: 0 auto;
+}
+
+.page {
+   flex: 1 1 auto;
+}
+
+.pink {
+   color: $ColorSelect;
+}
+
+@import "_header.scss";
+
+.the-brand {
+   margin-bottom: 64px;
+   background: linear-gradient(to right, #f4f3f3 50%, #F1E4E6 50%);
+   padding-left: calc(50% - 800px);
+   padding-right: calc(50% - 800px);
+	&__body {
+         display: flex;
+         justify-content: space-between
+	}
+
+	&__photo {
+      width: 50%;
+      & img {
+            width: 100%;
+      }
+	}
+
+	&__content {
+      width: 50%;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 92px;
+         
+   }
+      
+   &__content-body {
+      position: relative;
+      padding-left: 28px;
+      &:before {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 12px; 
+         height: 100%;
+         background-color: #F16D7F;
+         margin-right: 16px;
+      }
+   }
+
+	&__heading {
+      font-weight: 900;
+      text-transform: uppercase;
+      @include font(48px, $ColorSelectTwo, 58px);
+         
+	}
+
+	&__text {
+      @include font(32px, $ColorSelectTwo, 38px);
+      font-weight: 700;
+      text-transform: uppercase;
+	}
+}
+
+/*--------------------*/
+
+
+.categories {
+   margin-bottom: 100px;
+   &__columns {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -15px;
+      margin-bottom: 20px;
+   }
+
+   &__column {
+      flex: 1 0 33.3333%;
+      padding: 0 15px;
+      position: relative;
+      // left: 0;
+      // top: 0;
+   }
+
+   // &__column-content {
+   //    position: relative;  
+   // }
+
+   &__photo {
+      display: block;
+      overflow: hidden;
+      // height: 100%;
+      // width: 100%;
+      padding-top: 80%;
+      & img {
+         transition: transform .5s ease;
+         filter: brightness(30%);
+      }
+      & img:hover {
+         transform: scale(1.1);
+         // overflow: hidden;
+      }
+   }
+
+   &__content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+   }
+
+   &__text {
+      @include font(16px, #fff, 19px);
+      text-transform: uppercase;
+   }
+
+   &__heading {
+      @include font(24px, $ColorSelect, 29px);
+      font-weight: 700;
+      text-transform: uppercase;
+   }
+
+   &__row {
+      position: relative;
+   }
+
+   &__photo-long {
+      display: block;
+      padding-bottom: 16%;
+      overflow: hidden;
+      & img {
+         filter: brightness(30%);
+         transition: transform .5s ease;
+      }
+      & img:hover {
+         transform: scale(1.05);
+      }
+   }
+}
+
+/*--------------------*/
+
+.featured {
+   margin-bottom: 95px;
+
+   // &__body {
+   // }
+
+   &__header {
+      text-align: center;
+      margin-bottom: 33px;
+   }
+
+   &__heading {
+      @include font(30px, $ColorSelectTwo, 36px);
+      margin-bottom: 6px;
+   }
+
+   &__description {
+      @include font(14px, #9F9F9F, 17px);
+   }
+
+   // &__items {
+   // }
+
+   &__button {
+      display: block;
+      margin: 33px auto 0  auto;
+      max-width: 215px;
+      padding: 14px 38px;
+      border: 1px solid #FF6A6A;
+      transition: background-color 0.3s ease-in, color 0.3s ease-in;
+      @include font(16px, #F26376, 19px);
+      font-weight: 400px;
+      &:hover {
+         background-color: #F16D7F;
+         color: #fff;
+         // span {
+         //    color: #fff;
+         // }
+      }
+      // & span {
+      //    color: #F26376;
+      //    font-size: 16px;
+      //    line-height: 19px;
+      //    font-weight: 400px;
+      // }
+      
+      
+   }
+}
+
+
+
+/*--------------------*/
+
+.advantages {
+   background: $ColorSelectTwo;
+   &__content {
+      display: flex;
+      justify-content: space-between;
+      padding: 100px 0;
+   }
+
+   &__advantage {
+      flex: 0 1 33.3333%;
+      text-align: center;
+   }
+
+   &__img {
+      display: flex;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__title {
+      @include font(20px, #FBFBFB, 24px);
+      margin-bottom: 16px;
+      margin-top: 20px;
+   }
+
+   &__text {
+      font-weight: 300;
+      @include font(14px, #FBFBFB, 17px);
+   }
+}
+/*--------------------*/
+
+
+
+
+@import "_catalog.scss";
+@import "_product.scss";
+@import "_cart.scss";
+@import "_registration.scss";
+@import "_footer.scss";
