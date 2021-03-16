@@ -375,8 +375,7 @@
    }
 
    &__arrow {
-      
-      transition: fill 2s ease-in; //!как повесить анимацию на svg?
+      transition: fill 2s ease-in;
       &:hover path{
          fill: #EF5B70;   
       }

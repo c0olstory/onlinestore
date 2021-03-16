@@ -244,6 +244,7 @@ summary::-webkit-details-marker {
           flex: 0 1 33.3333%;
   padding: 0 15px;
   margin: 15px 0;
+  max-width: 390px;
 }
 
 @media (max-width: 1156px) {
@@ -256,8 +257,8 @@ summary::-webkit-details-marker {
 @media (max-width: 480px) {
   .cart-items__item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
+        -ms-flex: 0 1 90%;
+            flex: 0 1 90%;
   }
 }
 
